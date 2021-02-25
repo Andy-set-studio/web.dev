@@ -63,7 +63,7 @@ response:
     Content-Encoding: mi-sha256-03
     Date: Mon, 17 Aug 2020 16:08:24 GMT
     Vary: Accept-Encoding
-signature: 
+signature:
     label;cert-sha256=*ViFgi0WfQ+NotPJf8PBo2T5dEuZ13NdZefPybXq/HhE=*;
     cert-url="https://test.web.app/ViFgi0WfQ-NotPJf8PBo2T5dEuZ13NdZefPybXq_HhE";
     date=1597680503;expires=1598285303;integrity="digest/mi-sha256-03";sig=*MEUCIQD5VqojZ1ujXXQaBt1CPKgJxuJTvFlIGLgkyNkC6d7LdAIgQUQ8lC4eaoxBjcVNKLrbS9kRMoCHKG67MweqNXy6wJg=*;
@@ -202,7 +202,7 @@ has been omitted; this omission implies a `q-value` of `1` for SXG. Although an
 `Accept` header could theoretically contain the substring `q=1`, [in
 practice](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values)
 browsers don't explicitly list a format's `q-value` when it has the default
-value of `1`. 
+value of `1`.
 
 ## Debugging SXGs with Chrome DevTools {: #debugging }
 
@@ -210,14 +210,14 @@ Signed Exchanges can be identified by looking for `signed-exchange` in the
 **Type** column of the **Network** panel in Chrome DevTools.
 
 <figure class="w-figure">
-  <img src="./signed-exchange-network-panel.png" alt="Screenshot showing a SXG request within the 'Network' panel in DevTools" class="w-screenshot">
+  {% Img src="image/admin/cNdohSaeXqGHFBwD7L3B.png", alt="Screenshot showing a SXG request within the 'Network' panel in DevTools", width="696", height="201" %}
   <figcaption>The <b>Network</b> panel in DevTools</figcaption>
 </figure>
 
 The **Preview** tab provides more information about the contents of a SXG.
 
 <figure class="w-figure">
-  <img src="./sxg-preview.png" alt="Screenshot of the 'Preview' tab for a SXG" class="w-screenshot">
+  {% Img src="image/admin/E0rBwuxk4BxFmLJ3gXhP.png", alt="Screenshot of the 'Preview' tab for a SXG", width="800", height="561" %}
   <figcaption>The <b>Preview</b> tab in DevTools</figcaption>
 </figure>
 
@@ -291,7 +291,7 @@ would return the contents of `https://example.com` as an SXG. `/priv/doc/` is
 the default name of the `webpkgserver` endpoint. Use the `webpkgserver`
 [configuration
 file](https://github.com/google/webpackager/blob/master/cmd/webpkgserver/webpkgserver.example.toml)
-to customize the name of this endpoint, as well as many other settings. 
+to customize the name of this endpoint, as well as many other settings.
 
 In production, `webpkgserver` should not use a public endpoint. Instead, the
 frontend web server should forward SXG requests to `webpkgserver`. These
@@ -309,7 +309,7 @@ server.
 
   The NGINX SXG module only works with `CanSignHttpExchanges` certificates.
   Setup instructions can be found
-  [here](https://web.dev/how-to-set-up-signed-http-exchanges/). 
+  [here](https://web.dev/how-to-set-up-signed-http-exchanges/).
 
 - `gen-signedexchange`
 
